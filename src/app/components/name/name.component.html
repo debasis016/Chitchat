@@ -1,0 +1,14 @@
+<div fxFlex class="nameComponent" fxLayout="column">
+    <h1>
+      Welcome to ChitChat
+    </h1>
+    <mat-card class="card">
+      <div fxFlex fxLayout="column" class="nameContent">
+        <label>Hello! What is your name?</label>
+        <input matInput [(ngModel)]="chatUser" required class="nameText">
+        <div class="buttonContainer" fxLayoutAlign="flex-end">
+            <button type="button" class="chatButton"  (click)="goToChat()" mat-raised-button>Go!</button>
+        </div>        
+      </div>
+    </mat-card>
+  </div>

@@ -1,0 +1,54 @@
+// .chatButton {
+//   width: 20px;
+// }
+
+.chatTextArea {
+  height: 400px;
+}
+
+.header {
+  font-family: "cursive"
+}
+
+.messageInput {
+  width: 89%;
+  justify-content: flex-start;
+}
+
+.sendButton {
+  width: 10%;
+  background-color: rgb(193, 206, 207);
+  justify-content: flex-end;
+  color: black;
+}
+
+.body {
+  width: 79%;
+  height: 400px;
+  
+  border-style: solid;
+  overflow-y: scroll;
+  border-width: thin;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.chatComponent {
+  align-items: center;
+}
+
+.footer {
+  width: 80%;
+  justify-content: space-between;
+  height: 40px;
+}
+
+.received {
+  font-size: 20px;
+  color: firebrick;
+}
+
+.sent {
+  font-size: 20px;
+  color: darkblue;
+}

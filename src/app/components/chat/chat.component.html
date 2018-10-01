@@ -1,0 +1,16 @@
+<div fxFlex fxLayout="column" class="chatComponent" fxLayoutGap="1%">
+  <div class="header">
+    <h1>Chitchat with {{chatUser}}</h1>
+  </div>
+  <div class="body" #chatContainer>
+    <ng-container *ngFor="let message of messages | async">
+      <div>
+        <span class="{{message.sentBy === 'Echo Bot'? 'received': 'sent'}}">{{message.sentBy}}: {{message.text}}</span>
+      </div>
+    </ng-container>
+  </div>
+  <div fxLayout="row" class="footer">
+    <input matInput [(ngModel)]="inputMessage" (keyup.enter)="sendMessage()" class="messageInput" placeholder="Message">
+    <button type="button" mat-flat-button (click)="sendMessage()" class="sendButton">Send</button>
+  </div>
+</div>
