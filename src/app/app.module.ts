@@ -8,7 +8,7 @@ import { MaterialModule } from './material';
 import { ChatComponent } from './components/chat/chat.component';
 import { NameComponent } from './components/name/name.component';
 import { ChatService } from './services/chat.service';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -24,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     MaterialModule,
     FlexLayoutModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [ChatService],
   bootstrap: [AppComponent]

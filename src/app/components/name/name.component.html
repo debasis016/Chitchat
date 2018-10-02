@@ -1,14 +1,19 @@
 <div fxFlex class="nameComponent" fxLayout="column">
-    <h1>
-      Welcome to ChitChat
-    </h1>
-    <mat-card class="card">
+  <h1>
+    Welcome to ChitChat
+  </h1>
+  <mat-card class="card">
+      <form [formGroup]= "form" (ngSubmit) = "goToChat()">
       <div fxFlex fxLayout="column" class="nameContent">
         <label>Hello! What is your name?</label>
-        <input matInput [(ngModel)]="chatUser" required class="nameText">
+            <input matInput [(ngModel)]="chatUser" formControlName="name" required>
+            <div *ngIf="submitted && frm.name.invalid" class="alert">
+                Name is required
+            </div>            
         <div class="buttonContainer" fxLayoutAlign="flex-end">
-            <button type="button" class="chatButton"  (click)="goToChat()" mat-raised-button>Go!</button>
-        </div>        
+          <button type="button" class="chatButton" (click)="goToChat()" mat-flat-button>Go!</button>
+        </div>
       </div>
-    </mat-card>
-  </div>
+    </form>
+  </mat-card>
+</div>

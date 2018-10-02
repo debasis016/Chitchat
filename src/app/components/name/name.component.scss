@@ -10,6 +10,9 @@
 
 .card {
   width: 500px;
+  border-style: solid;
+  border-width: thin;
+  border-color: black;
 }
 
 .nameComponent {
@@ -24,4 +27,8 @@
 .buttonContainer {
   width: 200px;
   margin-top: 8px;
+}
+
+.alert {
+  color: red;
 }
